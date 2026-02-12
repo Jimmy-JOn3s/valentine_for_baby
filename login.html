@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
+    <div class="sky"></div>
+    <main class="login-wrap">
+      <section class="login-card">
+        <p class="tag">Private Love Zone</p>
+        <h1>One Sweet Checkpoint</h1>
+        <p class="desc">
+          My lovely lady, only you can unlock this little world I made. Enter our special nickname and step into all the memories I saved for you, my forever favorite person.
+        </p>
+
+        <form id="loginForm" class="login-form" autocomplete="off">
+          <input
+            id="passcode"
+            name="passcode"
+            type="text"
+            placeholder="Hint: a nickname that you always heard of"
+            required
+          />
+          <button type="submit">Unlock My Heart</button>
+        </form>
+      </section>
+    </main>
+
+    <div class="popup" id="errorPopup" aria-hidden="true" role="dialog" aria-labelledby="popupTitle">
+      <div class="popup-card">
+        <h2 id="popupTitle">Not Quite, My Love</h2>
+        <p>
+          Well try harder, the nickname popup shows up. Hint: think of the nickname you always heard.
+        </p>
+        <button type="button" id="closePopup">Try Again</button>
+      </div>
+    </div>
+
+    <div class="popup" id="successPopup" aria-hidden="true" role="dialog" aria-labelledby="successTitle">
+      <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+      <div class="popup-card success-card">
+        <div class="sparkle-stream left" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="sparkle-stream right" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <h2 id="successTitle">Access Granted, My Love</h2>
+        <p>
+          thank you for being by thiiis dumb ass side, i m the luckiest the dumb ass in the world to have you
+        </p>
+        <button type="button" id="toTimeline">to timeline</button>
+      </div>
+    </div>
+
+    <script src="./login.js"></script>
+  </body>
+</html>
