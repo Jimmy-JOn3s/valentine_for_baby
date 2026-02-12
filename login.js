@@ -5,7 +5,11 @@ const closePopup = document.getElementById("closePopup");
 const successPopup = document.getElementById("successPopup");
 const confettiLayer = document.getElementById("confettiLayer");
 const toTimeline = document.getElementById("toTimeline");
-const CORRECT_PASSCODES = new Set(["baby lone", "babylone"]);
+const NORMALIZED_PASSCODES = new Set(["babylone"]);
+
+function normalizePasscode(value) {
+  return value.toLowerCase().replace(/\s+/g, "").trim();
+}
 
 function showPopup() {
   errorPopup.classList.add("open");
@@ -69,9 +73,9 @@ document.addEventListener("keydown", (event) => {
 loginForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const entered = passcodeInput.value.trim().toLowerCase();
+  const entered = normalizePasscode(passcodeInput.value);
 
-  if (CORRECT_PASSCODES.has(entered)) {
+  if (NORMALIZED_PASSCODES.has(entered)) {
     showSuccessPopup();
     return;
   }

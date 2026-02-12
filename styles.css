@@ -442,6 +442,25 @@ h1 {
   font-size: 1.03rem;
 }
 
+.devotion-card {
+  background: var(--card);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  padding: 1.05rem 1.1rem;
+}
+
+.devotion-card p {
+  margin: 0;
+  line-height: 1.82;
+  color: var(--text);
+}
+
+.devotion-card p + p {
+  margin-top: 0.72rem;
+}
+
 .music-layout {
   display: block;
 }
